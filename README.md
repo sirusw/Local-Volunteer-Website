@@ -3,7 +3,7 @@ This website intends to solve the problems of inefficient posting and registrati
 happened in my city of Zhengzhou in China.
 
 # Background
-On July 20, 2021. Zhengzhou, as a megacity with 12 million people, experienced the heaviest rainfall ever recorded with 201.9 mm within a single hour, and a cumulative precipitation of 617.1 mm within a 3-day period, which is close to Zhengzhou's average annual precipitation of 640.8 mm. With such a heavy rainfall, the city of Zhengzhou gets flooded quickly, with supply outage and traffic shutdown. 
+On July 20, 2021, my city Zhengzhou, as a megacity with 12 million people, experienced the heaviest rainfall ever recorded with 201.9 mm within a single hour, and a cumulative precipitation of 617.1 mm within a 3-day period, which is close to Zhengzhou's average annual precipitation of 640.8 mm. With such a heavy rainfall, the city of Zhengzhou gets flooded quickly, with supply outage and traffic shutdown. 
 
 <img src="https://user-images.githubusercontent.com/50982809/130142164-ecbc76a0-e334-479c-80f7-9460e7f40fb2.jpg" width="510" height="382">
 Taken in my neighborhood
