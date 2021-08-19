@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6, p {
 	<div class="btnHeader">
 		${btnHeader}
 		<p id="uid" style="display: none">${id}</p>
-		<table align='center' border='1' cellspacing='0' id="volParticipated">
+		<table align='center' border='1' cellspacing='0' id="volParticipated" style="display: none">
 			<tr>
 				<td>uid</td>
 				<td>eid</td>
@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6, p {
 			</c:forEach>
 		</table>
 		
-		<table align='center' border='1' cellspacing='0' id="numPeopleParticipated">
+		<table align='center' border='1' cellspacing='0' id="numPeopleParticipated" style="display: none">
 			<tr>
 				<td>eid</td>
 				<td>numPeople</td>
@@ -103,7 +103,7 @@ h1, h2, h3, h4, h5, h6, p {
 			</form>
 		</div>
 	</div>
-	<table id="volEvent" align='center' border='1' cellspacing='0'>
+	<table id="volEvent" align='center' border='1' cellspacing='0' style="display: none">
 
 		<c:forEach items="${lv}" var="v" varStatus="st">
 			<tr>

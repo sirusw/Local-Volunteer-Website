@@ -15,6 +15,9 @@ public interface VolunteerMapper {
 	public List<Volunteer> get(int id); 
 	
 	public List<Volunteer> getEventParticipants(int id); 
+	
+	public List<Volunteer> getEventParticipated(int id); 
+	
 	public int update(Volunteer v);  
 	
 	public int setComplete(Volunteer v);

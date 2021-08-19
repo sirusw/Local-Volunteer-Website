@@ -138,7 +138,8 @@ public class UsersController {
 			
 			mav.addObject("btnHeader", "<h5 style=\"display:inline\">You are logged in as " + user.getFname() + " " + user.getLname() + "</h5> " + dropdownHTML);
 			mav.addObject("id", user.getId());
-			mav.addObject("volParticipated", volunteerService.get(user.getId()));
+			mav.addObject("volParticipated", volunteerService.getEventParticipated(user.getId()));
+			mav.addObject("user", usersService.get(user.getId()));
 			mav.addObject("numPeopleParticipated", volunteerService.count());
 			
 			
@@ -146,11 +147,52 @@ public class UsersController {
 			List<List<Volunteer>> listOfListVolunteer = new ArrayList<List<Volunteer>>();
 			for(VolEvent event: events) {
 				int eid = event.getId();
+				
 				List<Volunteer> listVolunteer = volunteerService.getEventParticipants(eid);
+				System.out.println("eid: " + eid + " Volunteer: "+listVolunteer.toString());
 				listOfListVolunteer.add(listVolunteer);
 			}
 			mav.addObject("eventPosted", events);
 			mav.addObject("listVolunteer", listOfListVolunteer);
+		}
+		return mav;
+	}
+	
+	@RequestMapping("changeInfo")
+	public ModelAndView changeInfo(Users user, String fname, String lname, String tel, String pw, HttpServletRequest request, RedirectAttributes redirectAttributes) {
+		System.err.println(user.toString());
+		System.err.println(request.getSession().getId());
+		ModelAndView mav = new ModelAndView("redirect:/settings");
+		
+		String sId = request.getSession().getId();
+		boolean exists = jedis.exists(sId);
+		if(!exists){
+			mav = new ModelAndView("redirect:/login");
+			redirectAttributes.addFlashAttribute("message", "Please log in!");
+		}
+		else {
+			String uid = jedis.get(sId);
+			System.err.println("Update return:" + usersService.update(Integer.parseInt(uid), lname,fname,tel,pw));
+			Users u = usersService.get(Integer.parseInt(uid));
+			redirectAttributes.addFlashAttribute("user", usersService.get(user.getId()));
+
+			
+			System.out.println("SETTINGS uid: " + uid + "\nUser toString: " + u.toString());
+			redirectAttributes.addFlashAttribute("id", user.getId());
+			redirectAttributes.addFlashAttribute("fname", user.getFname());
+			redirectAttributes.addFlashAttribute("lname", user.getLname());
+			redirectAttributes.addFlashAttribute("tel", user.getTel());
+			
+			user = u;
+			
+			redirectAttributes.addFlashAttribute("btnHeader", "<h5 style=\"display:inline\">You are logged in as " + user.getFname() + " " + user.getLname() + "</h5> " + dropdownHTML);
+			redirectAttributes.addFlashAttribute("id", user.getId());
+			redirectAttributes.addFlashAttribute("volParticipated", volunteerService.getEventParticipated(user.getId()));
+			
+			redirectAttributes.addFlashAttribute("numPeopleParticipated", volunteerService.count());
+			
+			
+			redirectAttributes.addFlashAttribute("updateMsg", "<h4>Updated!</h4>");
 		}
 		return mav;
 	}

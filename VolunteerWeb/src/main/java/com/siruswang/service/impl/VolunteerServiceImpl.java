@@ -44,5 +44,10 @@ public class VolunteerServiceImpl  implements VolunteerService{
 	public List<Volunteer> getEventParticipants(int i) {
 		return volunteerMapper.getEventParticipants(i);
 	}
+	@Override
+	public List<Volunteer> getEventParticipated(int id) {
+		
+		return volunteerMapper.getEventParticipated(id);
+	}
  
 }

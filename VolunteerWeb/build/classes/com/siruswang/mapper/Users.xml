@@ -20,6 +20,6 @@
             update users set lname=#{lname}, fname=#{fname}, tel=#{tel}, pw=#{pw}  where id=#{id}   
         </update>
         <select id="list" resultType="Users">
-            select * from  users     
+            select * from  users
         </select>    
     </mapper>

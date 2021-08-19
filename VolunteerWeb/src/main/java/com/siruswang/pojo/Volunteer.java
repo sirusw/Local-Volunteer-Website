@@ -11,6 +11,35 @@ public class Volunteer {
 	String fname;
 	String tel;
 	
+	String title;
+	String description;
+	String organizer;
+	String contact;
+	
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public String getOrganizer() {
+		return organizer;
+	}
+	public void setOrganizer(String organizer) {
+		this.organizer = organizer;
+	}
+	public String getContact() {
+		return contact;
+	}
+	public void setContact(String contact) {
+		this.contact = contact;
+	}
 	public String getLname() {
 		return lname;
 	}

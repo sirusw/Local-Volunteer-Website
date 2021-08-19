@@ -17,8 +17,14 @@
         </select>
         
         <select id="getEventParticipants" parameterType="_int" resultType="Volunteer">
-            select volunteer.eid, volunteer.uid, users.lname, users.fname, users.tel from   volunteer, users  where volunteer.uid = users.id and volunteer.eid= #{volunteer.eid} group by volunteer.eid   
+            select volunteer.eid, volunteer.uid, users.lname, users.fname, users.tel from   volunteer, users  where volunteer.uid = users.id and volunteer.eid= #{volunteer.eid}  
         </select>
+        
+        <select id="getEventParticipated" parameterType="_int" resultType="Volunteer">
+            select volunteer.eid, volevent.title, volevent.description, volevent.organizer, volevent.tel as contact from   volunteer, volevent  where volunteer.eid = volevent.id and volunteer.uid= #{volunteer.uid}  
+        </select>
+        
+        
  
         <update id="update" parameterType="Volunteer" >
             update volunteer set uid=#{uid}, eid=#{eid} where id=#{id}   

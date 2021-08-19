@@ -28,5 +28,10 @@ public class UsersServiceImpl  implements UsersService{
 		return usersMapper.get(i);
 		
 	}
+	@Override
+	public int update(int id, String lname, String fname, String tel, String pw) {
+		// TODO Auto-generated method stub
+		return usersMapper.update(id,  lname,  fname,  tel,  pw);
+	}
  
 }
