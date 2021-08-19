@@ -25,7 +25,7 @@ happened in my city of Zhengzhou in China.
 ## Settings - Events current user is participating
 ![](https://user-images.githubusercontent.com/50982809/130138418-cc72cc70-f44d-41ec-ae1b-7d97989e0fb5.png)
 
-## Settings - Events current user is participating
+## Settings - Change personal information
 ![](https://user-images.githubusercontent.com/50982809/130138442-311709e4-2578-4021-970f-85d757d75762.png)
 
 # Future
