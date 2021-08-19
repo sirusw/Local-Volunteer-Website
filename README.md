@@ -2,6 +2,22 @@
 This website intends to solve the problems of inefficient posting and registration of volunteer activities based on my own experiences during the 2021 Henan Flood 
 happened in my city of Zhengzhou in China.
 
+# Background
+On July 20, 2021. Zhengzhou, as a megacity with 12 million people, experienced the heaviest rainfall ever recorded with 201.9 mm within a single hour, and a cumulative precipitation of 617.1 mm within a 3-day period, which is close to Zhengzhou's average annual precipitation of 640.8 mm. With such a heavy rainfall, the city of Zhengzhou gets flooded quickly, with supply outage and traffic shutdown. 
+
+<img src="https://user-images.githubusercontent.com/50982809/130142164-ecbc76a0-e334-479c-80f7-9460e7f40fb2.jpg" width="510" height="382">
+Taken in my neighborhood
+<br /><br />
+
+Citizens and local volunteer associations quickly started to create WeChat groups for posting and registrating for volunteer activities. But with various founders of the group, whether by the government, local volunteer associations, or normal citizens, there are too many groups, with too many repeated posting in different groups which results in inefficiency. Therefore, this project attempts to solve this problem. 
+
+<img src="https://user-images.githubusercontent.com/50982809/130142181-c78fa7f5-aeb7-4e5b-960e-1dc51c5e94b5.jpg" width="382" height="510">
+A volunteer activity I participated
+<br />
+
+# Introduction
+Users of this website are required to register and login before posting or signing up for volunteer activities, then users could perform these actions with ease by doing so directly on the map. Posted activities and registered users are stored in MySQL database. In the settings, users could see the activities they posted and participated. Users can also change personal information in settings.
+
 # Tech
 - Google Maps API: posting and registering volunteering events directly on the map. 
 - SSM (Spring, SpringMVC, Mybatis) framework
