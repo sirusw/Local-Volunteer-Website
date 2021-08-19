@@ -122,7 +122,7 @@ h1, h2, h3, h4, h5, h6, p {
 	</table>
 	<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
 	<script
-		src="https://maps.googleapis.com/maps/api/js?key=GOOGLE_MAPS_API_KEY&callback=initMap&libraries=&v=weekly"
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCv_cjHBq_jwSSm4BbQkH7PoZsoGLHpczI&callback=initMap&libraries=&v=weekly"
 		async></script>
 </body>
 </html>
