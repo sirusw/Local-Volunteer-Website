@@ -1,0 +1,67 @@
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+.wrapper{
+	margin-top: 2%;
+	height: 100%;
+}
+#map {
+	height: 85%;
+	position: relative; 
+	overflow: hidden; 
+	width: 60% !important; 
+	display:inline-block !important;
+	float:left !important;
+	
+}
+.addEvent{
+	
+	 width: 30% !important; 
+	 float:left !important;
+	 border: 1px solid black;
+	 padding: 10px;	
+	 position: relative;
+	 margin-top:0;
+	 left: 100px;
+}
+
+
+
+html {
+	background-color: #f1f1f1;
+	width: 80%;
+	margin: 2px auto auto auto;
+}
+
+header {
+	background-color: #f1f1f1;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+h1 {
+	display: inline-block;
+}
+
+.btnHeader {
+	display: inline-block;
+	float: right;
+	padding-top: 25px;
+	padding-bottom: 5px;
+}
+
+.regArea {
+	height: 30%;
+	width: 30%;
+	border: 1px solid gray;
+	margin: auto;
+	padding: 15px;
+}
+
+body {
+	vertical-align: middle;
+	background-color: #f1f1f1 !important;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	font-family: 'Nunito', sans-serif;
+}

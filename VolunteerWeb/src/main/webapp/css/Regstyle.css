@@ -1,0 +1,62 @@
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+#map {
+	height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html, body {
+	height: 100%;
+	margin: auto;
+	padding: 0;
+}
+
+html {
+	background-color: #f1f1f1;
+	width: 98%;
+	margin: 2px auto auto auto;
+}
+
+header {
+	background-color: #f1f1f1;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+h1 {
+	display: inline-block;
+}
+
+.btnHeader {
+	display: inline-block;
+	float: right;
+	padding-top: 25px;
+	padding-bottom: 5px;
+}
+
+.regArea {
+	height: 30%;
+	width: 30%;
+	text-align: center;
+	margin: 10% auto auto auto;
+	padding: 15px;
+}
+
+.regAreaIn {
+	border: 1px solid gray;
+	padding: 15px;
+}
+
+.regAreaIn input {
+	display: inline-block;
+}
+
+body {
+	vertical-align: middle;
+	display: flex;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	font-family: 'Nunito', sans-serif;
+}

@@ -1,0 +1,25 @@
+use volunteer;
+
+
+create table volevent(
+       id int auto_increment,
+       title varchar(50),
+       description varchar(255),
+       img blob,
+       organizer varchar(255),
+       tel varchar(15),
+       numPeople int,
+       lat varchar(50),
+       lng varchar(50),
+       isComplete int,
+       primary key (id)
+)
+
+create table volunteer(
+       id int auto_increment,
+       uid int,
+       eid int,
+       primary key(id),
+       foreign key(uid) references users(id),
+       foreign key(eid) references volevent(id)
+)

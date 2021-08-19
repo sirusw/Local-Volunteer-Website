@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+    <mapper namespace="com.siruswang.mapper.VolEventMapper">
+        <insert id="add" parameterType="VolEvent" >
+            insert into volevent (title, description, organizer, tel, numPeople, lat, lng, isComplete, uid) values  (#{title},#{description},#{organizer},#{tel},#{numPeople},#{lat},#{lng}, 0, #{uid})  
+        </insert>
+         
+        <delete id="delete" parameterType="VolEvent" >
+            delete from volevent where id= #{id}  
+        </delete>
+         
+        <select id="get" parameterType="_int" resultType="VolEvent">
+            select * from   volevent  where uid= #{uid}   
+        </select>
+ 
+        <update id="update" parameterType="VolEvent" >
+            update users set lname=#{lname}, fname=#{fname}, tel=#{tel}, pw=#{pw}  where id=#{id}   
+        </update>
+        
+        <update id="setComplete" parameterType="VolEvent" >
+            update volevent set isComplete = 1 where id=#{id}   
+        </update>
+        
+        <select id="list" resultType="VolEvent">
+            select * from  volevent   
+        </select>    
+    </mapper>
